@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+
+
+    <style>
+        .card{
+              background-color: steelblue;
+              width: 300px;
+              height: 500px;
+              padding: 10px;
+              margin-left: 40%;
+              margin-top: 10%;
+              margin-bottom: 10%;
+              border: solid black;
+              text-align: center;
+        }
+
+        .fnm{
+
+              border-radius: 8px;
+                width: 60%;
+                height: 30px;
+                margin-left: 7%;
+                margin-top: 10px;
+            }
+
+        .lnm{
+
+                border-radius: 8px;
+                width: 60%;
+                height: 30px;
+                margin-left: 7%;
+                margin-top: 10px;
+            }
+        .unm{
+
+                border-radius: 8px;
+                width: 60%;
+                height: 30px;
+                margin-left: 7%;
+                margin-top: 10px;
+            }            
+
+        .lnm{
+
+                border-radius: 8px;
+                width: 60%;
+                height: 30px;
+                margin-left: 7%;
+                margin-top: 10px;
+            }
+
+        .psd1{
+
+                border-radius: 8px;
+                width: 60%;
+                height: 30px;
+                margin-left: 7%;
+                margin-top: 10px;
+            }
+
+        .psd2{
+
+                border-radius: 8px;
+                width: 60%;
+                height: 30px;
+                margin-left: 7%;
+                margin-top: 10px;
+            }
+
+        .eml{
+
+                border-radius: 8px;
+                width: 60%;
+                height: 30px;
+                margin-left: 7%;
+                margin-top: 10px;
+            }
+
+         h2{
+
+                color: black;
+                font-size: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bolder;
+                margin-top: 10px;
+            }
+
+
+        
+
+
+    </style>
+</head>
+<body>
+
+    <form action="" method="POST" enctype="multipart/form-data"  >
+
+        {% csrf_token %}
+
+        <div class="card">
+        <h2>REGISTER FORM</h2>
+            {% render_field form.first_name placeholder="FIRST NAME" class+="fnm" %} <br><br>
+            {% render_field form.last_name placeholder="LAST NAME" class+="lnm" %} <br><br>
+            {% render_field form.username placeholder="USER NAME" class+="unm" %} <br><br>
+            {% render_field form.password1 placeholder="PASSWD ONE" class+="psd1" %} <br><br>
+            {% render_field form.password2 placeholder="PASSWD TWO" class+="psd2" %} <br><br>
+            {% render_field form.email placeholder="EMAIL" class+="eml" %} <br><br>
+            
+            <input type="submit"  style="height: 40px;background-origin: padding-box;border-radius: 5px;font-weight: bolder;">
+
+        </div>
+    </form>
+    
+</body>
+</html>

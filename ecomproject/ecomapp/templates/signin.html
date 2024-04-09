@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .card{
+            background-color: #91634d;
+            padding: 10px;
+            height: 300px;
+            width: 200px;
+            margin-left: 40%;
+            margin-top: 10%;
+            border-style: solid;
+            text-align: center;
+
+
+        }
+        .unm{
+
+            padding-left: 5px;
+            border-radius: 5px;
+            width: 90%;
+            height: 10%;
+        }
+        .psd{
+
+            padding-left: 5px;
+            border-radius: 5px;
+            width:90%;
+            height: 10%;
+
+        }
+
+        
+
+        body{
+            background-color:grey;
+        }
+
+        h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+
+        {% csrf_token %}
+
+        <div class="card">
+
+            <h2>SIGN IN</h2>
+            {% render_field form.username placeholder="username" class+="unm" %} <br><br>
+            {% render_field form.password placeholder="password" class+="psd" %} <br><br>
+
+            <input type="submit"  style="font-weight: bolder;">
+
+        </div>
+    </form>
+</body>
+</html>
